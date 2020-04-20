@@ -1,1 +1,2 @@
-This folder consists a set of files which are actually the solutions of hackerrank practice problems of SQL
+This folder consists a set of files which are actually the solutions of hackerrank practice problems of SQL.
+The solutions are in the form of MySQL.
