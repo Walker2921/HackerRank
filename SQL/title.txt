@@ -1,0 +1,1 @@
+This folder consists a set of files which are actually the solutions of hackerrank practice problems of SQL
