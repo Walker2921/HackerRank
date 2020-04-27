@@ -1,0 +1,10 @@
+SELECT
+   (SELECT W1.id FROM wands W1 INNER JOIN wands_property P1 
+    ON W1.code = P1.code
+    WHERE P1.age=P2.age 
+    AND W1.coins_needed = min( W2.coins_needed ) )
+, P2.age, min( W2.coins_needed ), W2.power
+FROM wands W2 INNER JOIN wands_property P2
+ON W2.code = P2.code
+WHERE P2.is_evil = 0
+GROUP BY W2.power DESC, P2.age DESC;
