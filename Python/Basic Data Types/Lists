@@ -1,0 +1,26 @@
+n = int(input())
+b = []
+c = []
+for i in range(0,n):
+    a = input()
+    c = a.split()
+    if(c[0]=='insert'):
+        k = int(c[1])
+        s = int(c[2])
+        b.insert(k,s)
+    elif(c[0]=='print'):
+        print(b)
+    elif(c[0]=='remove'):
+        k = int(c[1])
+        b.remove(k)
+    elif(c[0]=='append'):
+        k = int(c[1])
+        b.append(k)
+    elif(c[0]=='sort'):
+        b.sort()
+    elif(c[0]=='pop'):
+        b.pop()
+    elif(c[0]=='reverse'):
+        b.reverse()
+    else:
+        continue
