@@ -1,4 +1,2 @@
-SET @row := 0;
-SELECT REPEAT('* ', @row := @row + 1) 
-FROM information_schema.TABLES 
-WHERE @row < 20;
+SELECT REPEAT('* ', @NUMBER := @NUMBER + 1) 
+FROM information_schema.tables, (SELECT @NUMBER:=0) t LIMIT 20
