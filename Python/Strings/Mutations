@@ -1,0 +1,16 @@
+def mutate_string(s, p, c):
+    k = list(s)
+    k[p] = c
+    s = ''.join(k)
+    return s
+# solution code ends here
+
+
+
+
+
+if __name__ == '__main__':
+    s = input()
+    i, c = input().split()
+    s_new = mutate_string(s, int(i), c)
+    print(s_new)
