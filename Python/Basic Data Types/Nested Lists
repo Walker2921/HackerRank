@@ -1,0 +1,10 @@
+N = int(input())
+k = []
+for i in range(N):
+    n = input()
+    m = float(input())
+    k.append([n, m])
+k.sort(key=lambda d: (d[1], d[0]))
+slm=[d[1] for d in k if d[1]!=k[0][1]][0]
+for s in [d for d in k if d[1] == slm]:
+    print(s[0])
