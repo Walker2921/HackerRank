@@ -1,0 +1,17 @@
+n = int(input())
+for i in range(0,n):
+    k = input()
+    temp=0
+    if(len(k)==10):
+        for i in range(0,10):
+            if(ord(k[i])>=48 and ord(k[i])<=57):
+                temp+=1
+        if(temp==10):          
+            if(k[0]=='7' or k[0]=='8' or k[0]=='9'):
+                print('YES')
+            else:
+                print('NO')
+        else:
+            print("NO")
+    else :
+        print('NO')
