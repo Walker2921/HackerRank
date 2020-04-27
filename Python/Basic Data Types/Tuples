@@ -1,0 +1,4 @@
+x = int(input())
+k = input()
+res = tuple(map(int, k.split(' ')))
+print(hash(res))
