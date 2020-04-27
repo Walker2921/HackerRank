@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    int a[20],i;
+    for(i=0;i<3;i++)
+        scanf("%d",&a[i]);    
+    for(i=3;i<n;i++)
+        a[i] = a[i-1]+a[i-2]+a[i-3];
+    printf("%d",a[n]);
+    return 0;
+}
