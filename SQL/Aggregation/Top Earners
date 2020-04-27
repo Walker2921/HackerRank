@@ -1,0 +1,5 @@
+SELECT max(months*salary), count(employee_id)
+FROM employee 
+GROUP BY months*salary 
+ORDER BY months*salary 
+DESC limit 1;
