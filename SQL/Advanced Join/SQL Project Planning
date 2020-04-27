@@ -1,0 +1,15 @@
+SET @row1:= 0; 
+SET @row2:= 0; 
+SELECT PS.start_date, PE.end_date 
+FROM ( SELECT @row1:= @row1+1 rown, start_date 
+       FROM projects 
+       WHERE start_date NOT IN (SELECT end_date 
+                                FROM projects) ) 
+       AS PS 
+INNER JOIN ( SELECT @row2:= @row2+1 rown, end_date 
+             FROM projects 
+             WHERE end_date NOT IN (SELECT start_date 
+                                    FROM projects) ) 
+             AS PE 
+ON PS.rown = PE.rown 
+ORDER BY PE.end_date - PS.start_date, PS.start_date;
