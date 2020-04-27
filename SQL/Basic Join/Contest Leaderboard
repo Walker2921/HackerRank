@@ -1,0 +1,9 @@
+SELECT * FROM
+    (SELECT H.hacker_id,name,sum(subs.ms) ts 
+     FROM hackers H INNER JOIN (SELECT hacker_id, challenge_id, max(score) ms 
+                                FROM submissions 
+                                GROUP BY hacker_id, challenge_id) subs 
+     ON H.hacker_id=subs.hacker_id 
+     GROUP BY H.hacker_id, H.name) data 
+WHERE data.ts > 0
+ORDER BY data.ts DESC, hacker_id;
